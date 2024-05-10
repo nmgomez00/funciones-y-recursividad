@@ -6,7 +6,19 @@ int fib(int numero){
     return (numero <= 1) ? numero : (fib(numero - 1) + fib(numero - 2));
 }
 void f();
-
+//version mas eficiente
+//https://www.geeksforgeeks.org/measure-execution-time-function-cpp/
+/*bool es_primo(int numero){
+    int lim = numero;
+    for(int i = 2; i<lim-1;i++){
+        if(numero%i == 0){
+            return false;
+        }else{
+            lim = lim /i;
+        }
+    }
+    return true;
+}*/
 bool es_primo(int numero){
     for(int i = 2; i<numero-1;i++){
         if(numero%i == 0){
